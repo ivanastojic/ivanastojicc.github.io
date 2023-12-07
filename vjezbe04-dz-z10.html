@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>zadatak10</title>
+ <script type="text/javascript">
+ 
+ function f(broj1,broj2){
+    if(broj1>broj2){
+        var pom=broj1;
+        broj1=broj2;
+        broj2=pom;
+    }
+    for(i=0;i<5;i++){
+        const random= Math.floor(Math.random() * (broj2 - broj1) + broj1);
+        console.log(random);
+        document.write(random+'<br/>');
+    }
+ }
+ f(32,15);
+
+</script>
+</head>
+<body>
+</body>
+</html>

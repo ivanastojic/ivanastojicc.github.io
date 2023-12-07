@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>zadatak8</title>
+ <script type="text/javascript">
+ 
+ var arr = ['Ovo' , 'je', 'My', 'prvi', 'komad', 'OF', 'JAVASCRIPT', 'koda', 'Koji', ',', 'je', 'proradio'];
+
+ function f(arr){
+    var noviarr=arr.filter(function(vrijednost){
+        var v=vrijednost.replace(/[^a-zA-Z0-9]/g,'');
+        return /[A-Z]/.test(v)  || v.length>=5;
+
+    });
+    console.log(noviarr);
+    document.write("["+noviarr+"]");
+    return noviarr;
+}
+f(arr);
+
+ 
+</script>
+</head>
+<body>
+</body>
+</html>

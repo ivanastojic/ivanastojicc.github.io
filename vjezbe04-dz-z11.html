@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zadatak11</title>
+  <script>
+ const tempDay = ['2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0];
+
+ function f(tempDay) {
+  const datum = tempDay[0];
+  //funkciju slice(1) koristimo da stvorimo novi niz koji sadrzi elemente prethodnog ali pocinje od drugog elementa, jer je prvi element u ovom slucaju datum
+  const temperature = tempDay.slice(1);
+
+  // tri tockice u zagradi predstavljaju da se elementi niza prenose kao pojedinacni argumenti funkcije,a ove funkcije racunaju najvecu i najmanju temperaturu
+  const minT= Math.min(...temperature);
+  const maxT = Math.max(...temperature);
+  
+  //funkcija reduce() zbraja sve temerature koje se nalaze u nizu
+  const ukupnaTemp = temperature.reduce((zbroj, temp) => zbroj + temp, 0);
+  const prosjekT = ukupnaTemp / temperature.length;
+
+  console.log('Datum:'+datum);
+  document.write('datum:'+datum+'<br/>');
+  console.log('Najmanja temperatura:'+minT+'°C');
+  document.write('Najmanja temperatura:'+minT+'°C'+'<br/>');
+  console.log('Najveća temperatura:'+maxT+'°C');
+  document.write('Najveca temperatura:'+maxT+'°C'+'<br/>');
+  console.log('Prosječna temperatura:'+ prosjekT+'°C');
+  document.write('Prosječna temperatura:'+prosjekT+'°C');
+}
+f(tempDay);
+  </script>
+</head>
+<body>
+</body>
+</html>

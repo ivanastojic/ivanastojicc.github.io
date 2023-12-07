@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>zadatak9</title>
+ <script type="text/javascript">
+ 
+ function f(broj){
+  for(i=1;i<broj;i++){
+   if(savrsenbroj(i)){
+   console.log(i);
+  document.write(i+'<br/>');
+   }
+  }
+ }
+
+ function savrsenbroj(br){
+ let zbroj=0;
+ for(i=1;i<br;i++){
+   if(br%i===0){
+    zbroj+=i;
+   }
+ } 
+ return zbroj===br;
+ }
+
+ f(158);
+
+</script>
+</head>
+<body>
+</body>
+</html>
